@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr" ng-app="cryptofxApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=360, initial-scale=1">
+  <title>CryptoFX App</title>
+  
+
+  <!-- cordova.js or phonegap.js depending on which CLI used - automatically added into project when
+       using the CLI to build and run the application -->
+  <script src="cordova.js"></script>
+
+  <!-- Angular ressources -->
+  <script src="lib/angular/js/angular.min.js"></script>
+  <script src="lib/angular/js/angular-route.min.js"></script>
+  <script src="lib/angular/js/angular-ui-router.js"></script>
+  <script src="lib/angular/js/angular-cookies.min.js"></script>
+  <script src="lib/angular/js/angular-animate.min.js"></script>
+  <script src="lib/angular/js/angular-sanitize.min.js"></script>
+  <script src="lib/angular/js/angular-local-storage.min.js"></script>
+
+  <!-- onsenui ress -->
+  <script src="lib/onsen/js/onsenui.js"></script>
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-blue-basic-theme.css" />
+    <!-- CSP support mode (required for Windows Universal apps)
+         <link rel="stylesheet" href="lib/angular/angular-csp.css" />
+    -->
+
+    <!-- App Ress
+         Will ne to be minified and merged into a single page, for a start we put all files
+         GRUNT uglify compress -> /js/public
+         -->
+    <link rel="stylesheet" href="styles/app.css"/>
+
+    <!-- Config files -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers.js"></script>
+  <script src="scripts/services.js"></script>
+  <script src="scripts/filters.js"></script>
+  <script src="scripts/directives.js"></script>
+    <!-- controllers -->
+    <script src="scripts/controllers/mainCtrl.js"></script>
+    <script src="scripts/controllers/applicationCtrl.js"></script>
+    <script src="scripts/controllers/loginCtrl.js"></script>
+    <!-- services -->
+    <!-- filters -->
+    <!-- directives -->
+</head>
+
+<body ng-class="className" ng-controller="mainCtrl">
+<div ui-view></div>
+
+    <!-- The sliding menu will show full screen and cover the status bar in iOS7. If you don't want this and want
+         it to look more like iOS6 then be sure to add the StatusBarPlugin from the project readme and set the
+         preference in your config.xml for the status bar overlay to false. I left some code in below to help
+         handle this, you can look at the different options supported for the StatusBar plugin at
+         http://plugins.cordova.io/#/package/org.apache.cordova.statusbar.
+        You could also add these preferences to the config.xml for the iOS platform in place of the code below
+        (note, these prefs may not yet be supported by PG Build)
+        <preference name="StatusBarBackgroundColor" value="#C9C9C9" />
+        <preference name="StatusBarOverlaysWebView" value="false" />
+    <script language="javascript">
+        document.addEventListener('deviceready', function () {
+            // Sample code for Status Bar handling depending on preferences
+            // StatusBar.overlaysWebView(false);                                 defaults to true
+            // StatusBar.backgroundColorByHexString("#C9C9C9");                  defaults to black
+            // StatusBar.styleDefault();                                         dark text on lighter bg
+        })
+    </script>
+
+    <ons-screen>
+        <ons-sliding-menu
+          behind-page="menu.html"
+          above-page="homeNav.html">
+        </ons-sliding-menu>
+    </ons-screen>
+-->
+</body>
+</html>
